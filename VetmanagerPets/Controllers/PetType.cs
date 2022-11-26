@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Net.Http;
+﻿using System.Net.Http;
+using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
 namespace VetmanagerPets.Controllers
@@ -14,14 +14,17 @@ namespace VetmanagerPets.Controllers
             vmSettings = new VMSettings();
             vmSettings.Load();
         }
+
         private string GetUrl()
         {
             return VetmanagerUrl.GetValidUrl(vmSettings.GetDomain()) + URL;
         }
+
         private string GetUrl(string filter)
         {
             return VetmanagerUrl.GetValidUrl(vmSettings.GetDomain()) + URL + filter;
         }
+
         private List<PetTypeModel> GetData(string url)
         {
             try
@@ -41,6 +44,7 @@ namespace VetmanagerPets.Controllers
             }
             catch { return null; }
         }
+
         public string Get(uint petTypeId)
         {
             List<PetTypeModel> petType = GetData(GetUrl(Filter.Get("id", petTypeId)));
@@ -54,6 +58,7 @@ namespace VetmanagerPets.Controllers
             }
             return "Неизвестно";
         }
+
         public List<PetTypeModel> GetAll()
         {
             return GetData(GetUrl());

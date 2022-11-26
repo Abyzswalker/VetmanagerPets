@@ -17,6 +17,7 @@ namespace VetmanagerPets.Views
         private uint petBreadId;
         private string petSex = "";
         private string petBirthday = "";
+
         public EditPetForm(uint clientId, uint petId)
         {
             InitializeComponent();

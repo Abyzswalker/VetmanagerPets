@@ -10,16 +10,12 @@ namespace VetmanagerPets.Controllers
     {
         private VMSettings vmSettings;
         private const string URL = "/rest/api/pet/";
-        public Pet(VMSettings vmSettings)
-        {
-            this.vmSettings = vmSettings;
-        }
 
         public Pet()
         {
             vmSettings = new VMSettings();
             vmSettings.Load()
-;        }
+;       }
 
         private string GetUrl()
         {
@@ -29,7 +25,8 @@ namespace VetmanagerPets.Controllers
         private string GetUrl(string filter)
         {
             return VetmanagerUrl.GetValidUrl(vmSettings.GetDomain()) + URL + filter;
-        }        
+        }   
+        
         private List<PetModel> GetData(string url)
         {
             try
@@ -120,6 +117,7 @@ namespace VetmanagerPets.Controllers
             }
             catch (Exception) { return false; }
         }
+
         public bool Delete(uint petId)
         {
             try
@@ -137,6 +135,7 @@ namespace VetmanagerPets.Controllers
             }
             catch (Exception) { return false; }
         }
+
         private FormUrlEncodedContent FormContentForAdd(uint ownerId, string alias, uint typeId, uint breadId, string sex, string birthday)
         {
             return new FormUrlEncodedContent(new[]
@@ -149,6 +148,7 @@ namespace VetmanagerPets.Controllers
                     new KeyValuePair<string, string>("birthday", birthday)
                 });
         }
+
         private FormUrlEncodedContent FormContentForEdit(string alias, uint typeId, uint breadId, string sex, string birthday)
         {
             return new FormUrlEncodedContent(new[]

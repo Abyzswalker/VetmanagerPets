@@ -92,6 +92,7 @@ namespace VetmanagerPets.Views
                 errorForm.Show();
             }
         }
+
         private void petAliasTextBox_TextChanged(object sender, EventArgs e)
         {            
             petAlias = petAliasTextBox.Text;

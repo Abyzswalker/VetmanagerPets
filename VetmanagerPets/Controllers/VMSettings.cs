@@ -9,10 +9,12 @@ namespace VetmanagerPets.Controllers
     {
         private VMSettingsModel vmSettingsModel;
         private const string URL = "/token_auth.php";
+
         private string GetUrl()
         {
             return VetmanagerUrl.GetValidUrl(vmSettingsModel.domain);
         }
+
         private string GetAuthToken()
         {
             try
@@ -28,6 +30,7 @@ namespace VetmanagerPets.Controllers
             }
             catch (Exception) { return null; }
         }
+
         public bool Save(string domain, string login, string password)
         {
             vmSettingsModel = new VMSettingsModel()
@@ -53,7 +56,8 @@ namespace VetmanagerPets.Controllers
             else 
                 return false;            
         }
-        public FormUrlEncodedContent FormContent()
+
+        private FormUrlEncodedContent FormContent()
         {
             return new FormUrlEncodedContent(new[]
                 {
@@ -62,22 +66,27 @@ namespace VetmanagerPets.Controllers
                     new KeyValuePair<string, string>("app_name", vmSettingsModel.appName)
                 });
         }
+
         public string GetDomain()
         {
             return vmSettingsModel.domain;
         }
+
         public string GetLogin()
         {
             return vmSettingsModel.login;
         }
+
         public string GetToken()
         {
             return vmSettingsModel.token;
         }
+
         public string GetPass()
         {
             return vmSettingsModel.password;
         }
+
         public string GetAppName()
         {
             return vmSettingsModel.appName;

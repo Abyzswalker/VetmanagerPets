@@ -44,9 +44,9 @@
             this.domenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.domenLabel.Location = new System.Drawing.Point(30, 35);
             this.domenLabel.Name = "domenLabel";
-            this.domenLabel.Size = new System.Drawing.Size(60, 18);
+            this.domenLabel.Size = new System.Drawing.Size(66, 18);
             this.domenLabel.TabIndex = 1;
-            this.domenLabel.Text = "Домен:";
+            this.domenLabel.Text = "Домен*:";
             // 
             // loginLabel
             // 
@@ -54,9 +54,9 @@
             this.loginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginLabel.Location = new System.Drawing.Point(30, 77);
             this.loginLabel.Name = "loginLabel";
-            this.loginLabel.Size = new System.Drawing.Size(50, 18);
+            this.loginLabel.Size = new System.Drawing.Size(60, 18);
             this.loginLabel.TabIndex = 2;
-            this.loginLabel.Text = "Логин";
+            this.loginLabel.Text = "Логин*:";
             // 
             // passLabel
             // 
@@ -64,9 +64,9 @@
             this.passLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passLabel.Location = new System.Drawing.Point(30, 116);
             this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(61, 18);
+            this.passLabel.Size = new System.Drawing.Size(71, 18);
             this.passLabel.TabIndex = 3;
-            this.passLabel.Text = "Пароль";
+            this.passLabel.Text = "Пароль*:";
             // 
             // domenField
             // 

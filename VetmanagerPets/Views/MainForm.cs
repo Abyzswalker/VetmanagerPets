@@ -12,10 +12,10 @@ namespace VetmanagerPets
         private VMSettings vmSettings;
         private uint clientId;
         private uint petId;
+
         public MainForm()
         {
             InitializeComponent();
-            // Сделать config.Load() при сохранении настроек.
         }
                
         protected override void OnLoad(EventArgs e)

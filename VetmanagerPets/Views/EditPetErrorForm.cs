@@ -9,6 +9,7 @@ namespace VetmanagerPets.Views
         {
             InitializeComponent();
         }
+
         private void AddPetErrorBtn_Click(object sender, EventArgs e)
         {
             Close();
